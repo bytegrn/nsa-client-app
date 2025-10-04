@@ -2,9 +2,9 @@ import SideNavBar from "@/components/SideNavBar";
 
 export default function systemLayout(props: React.PropsWithChildren) {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen p-6">
       <SideNavBar />
-      <main>{props.children}</main>
+      <main className="flex-1 h-full pt-8">{props.children}</main>
     </div>
   );
 }
