@@ -4,13 +4,15 @@ export default function Header({
   title,
   subTitle,
   rightButtons,
+  border,
 }: {
   title: string;
   subTitle: string;
   rightButtons: React.ReactNode[];
+  border?: true;
 }) {
   return (
-    <div className="flex px-6 justify-between flex-1 pb-6">
+    <div className="flex px-6 flex-1 pb-6 justify-between relative">
       <div className="gap-1">
         <h1 className="text-[30px] leading-[38px] text-ui-gray-900 font-medium">
           {title}
@@ -23,6 +25,10 @@ export default function Header({
       {rightButtons.map((button, index) => (
         <div key={index}>{button}</div>
       ))}
+
+      {border && (
+        <div className="h-[1px] w-[calc(100%-24px)] bg-ui-gray-200 absolute bottom-0"></div>
+      )}
     </div>
   );
 }

@@ -1,11 +1,13 @@
+import DashboardStatCardsWrap from "@/components/DashboardStatCardsWrap";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 
 export default function Dashboard() {
   return (
-    <div className="flex justify-between items-center">
+    <div>
       <Header
+        border
         title="Welcome back, Abiola"
         subTitle="Track, manage and resolve your support tickets."
         rightButtons={[
@@ -18,6 +20,10 @@ export default function Dashboard() {
           </Button>,
         ]}
       />
+
+      <div className="pt-8">
+        <DashboardStatCardsWrap />
+      </div>
     </div>
   );
 }
