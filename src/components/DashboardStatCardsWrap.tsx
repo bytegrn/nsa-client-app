@@ -34,7 +34,7 @@ export default function DashboardStatCardsWrap() {
     },
   ];
   return (
-    <div className="flex flex-wrap pl-6 items-start flex-row gap-6 whitespace-nowrap w-full">
+    <div className="flex flex-wrap px-6 items-start flex-row gap-6 whitespace-nowrap w-full">
       {DASHBOARD_STATS.map(({ title, count, percentageValue, trend }) => (
         <DashboardStatCard
           key={title}

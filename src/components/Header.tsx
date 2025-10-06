@@ -8,7 +8,7 @@ export default function Header({
 }: {
   title: string;
   subTitle: string;
-  rightButtons: React.ReactNode[];
+  rightButtons?: React.ReactNode[];
   border?: true;
 }) {
   return (
@@ -22,12 +22,11 @@ export default function Header({
         </p>
       </div>
 
-      {rightButtons.map((button, index) => (
-        <div key={index}>{button}</div>
-      ))}
+      {rightButtons &&
+        rightButtons.map((button, index) => <div key={index}>{button}</div>)}
 
       {border && (
-        <div className="h-[1px] w-[calc(100%-24px)] bg-ui-gray-200 absolute bottom-0"></div>
+        <div className="h-[1px] w-[calc(100%-48px)] bg-ui-gray-200 absolute bottom-0"></div>
       )}
     </div>
   );
