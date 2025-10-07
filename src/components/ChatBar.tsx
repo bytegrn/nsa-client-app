@@ -6,7 +6,7 @@ import { Send } from "lucide-react";
 
 export default function ChatBar() {
   return (
-    <div className="px-6 absolute left-0 right-0">
+    <div className="px-6">
       <div className="flex bg-white gap-3 items-end px-6 py-4 rounded-b-[16px]">
         <Textarea
           placeholder="Ask for IT support"
