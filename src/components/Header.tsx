@@ -12,7 +12,7 @@ export default function Header({
   border?: true;
 }) {
   return (
-    <div className="flex px-6 flex-1 pb-6 justify-between relative">
+    <div className="flex px-6 pb-6 justify-between relative">
       <div className="gap-1">
         <h1 className="text-[30px] leading-[38px] text-ui-gray-900 font-medium">
           {title}
