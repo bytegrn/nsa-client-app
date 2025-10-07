@@ -1,12 +1,11 @@
 import Header from "@/components/Header";
 import Image from "next/image";
 import { ticketSupportQuickActions } from "@/constants";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import ChatBar from "@/components/ChatBar";
 
 export default function createTicket() {
   return (
-    <div>
+    <div className="h-full flex flex-col">
       <Header
         title="Create Ticket"
         subTitle="Create support tickets with agent"
@@ -14,10 +13,10 @@ export default function createTicket() {
       />
 
       <div className="relative h-full">
-        <div className="px-6 pt-8">
+        <div className="px-6 pt-8  flex flex-col h-full justify-center items-center">
           {/* scroll item container */}
-          <div className="rounded-t-[16px] bg-white h-full">
-            <div className="rounded-t-[16px] py-10 flex flex-col items-center">
+          <div className="rounded-t-[16px] w-full bg-white h-full flex flex-col">
+            <div className="rounded-t-[16px] py-10 h-full flex flex-col items-center">
               <Image
                 src={"/bot.svg"}
                 height={160}
@@ -39,7 +38,7 @@ export default function createTicket() {
                 {ticketSupportQuickActions.map(({ command, issue }) => (
                   <div
                     key={command}
-                    className="border flex-1 min-w-[211px] max-w-[211px] rounded-[8px] p-4 border-ui-gray-300 flex flex-col gap-1"
+                    className="border flex min-w-[211px] max-w-[211px] rounded-[8px] p-4 border-ui-gray-300 flex flex-col gap-1"
                   >
                     <h3 className="text-[14px] leading-5 font-semibold">
                       {command}
@@ -52,10 +51,10 @@ export default function createTicket() {
               </div>
             </div>
           </div>
-        </div>
         {/* chatbox */}
-        <div className="absolute left-0 right-0 bottom-0">
-          <ChatBar />
+        <div className="relative w-full">
+               <ChatBar />
+        </div>
         </div>
       </div>
     </div>
