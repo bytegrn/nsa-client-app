@@ -16,8 +16,7 @@ export default function createTicket() {
 
       <div className="flex flex-col h-full pt-8 relative px-6 overflow-hidden">
         {/* chat area */}
-
-        <ScrollArea className="bg-white rounded-t-[16px] py-8 h-[calc(100%-55px)] pr-6">
+        <ScrollArea className="bg-white rounded-t-[16px] py-8 h-[calc(100%-87px)] pr-6">
           <div className="flex-1 flex flex-col items-center">
             <Image
               src={"/bot.svg"}
