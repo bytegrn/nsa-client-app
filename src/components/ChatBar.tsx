@@ -1,24 +1,34 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
+import { useRef } from "react";
 
 export default function ChatBar() {
+  const textAreaInput = useRef<HTMLTextAreaElement>(null);
+
+  const initialInputHeight = textAreaInput.current?.scrollHeight;
+
+  const addjustHeightDynamically = () => {
+    if (textAreaInput.current) {
+      textAreaInput.current.style.height = `${initialInputHeight}px`;
+      textAreaInput.current.style.height = `${textAreaInput.current.scrollHeight}px`;
+    }
+  };
+
   return (
-    <div className="flex bg-white gap-3 items-end px-6 py-4 rounded-b-[16px]">
+    <div className="flex bg-white gap-3 items-center px-6 rounded-b-[16px]">
       <textarea
         placeholder="Ask for IT Support"
-        className="border-none leading-normal flex items-center h-full text-[16px] font-normal text-ui-gray-500 w-full max-h-[77px] resize-none px-[14px] shadow-none rounded-[8px]"
+        required
+        spellCheck="false"
+        onInput={addjustHeightDynamically}
+        ref={textAreaInput}
+        className="border-none h-[55px] py-[15px] overflow-y-auto flex items-center text-[16px] font-normal text-ui-gray-500 w-full max-h-[250px] resize-none px-[14px] shadow-none rounded-[8px]"
       />
 
-      <Button
-        variant="outline"
-        size="icon"
-        aria-label="Submit"
-        className="rounded-[8px] bg-primary"
-      >
+      <button aria-label="Submit" className="rounded-[8px] bg-primary">
         <Send size={"20px"} color="#ffffff" />
-      </Button>
+      </button>
     </div>
   );
 }
