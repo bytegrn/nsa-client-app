@@ -1,11 +1,10 @@
 import Header from "@/components/Header";
 import Image from "next/image";
-import { ticketSupportQuickActions } from "@/constants";
 import ChatBar from "@/components/ChatBar";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import QuickActions from "@/components/QuickActions";
 
-export default function createTicket() {
+export default function ticketSupport() {
   return (
     <div className="h-full flex flex-col w-full">
       <Header

@@ -45,7 +45,7 @@ export default function LoginForm() {
       const res = await axiosInstance.post("/auth/login", formValues);
       const authenticated = res.data?.success && res.data?.authenticated;
 
-      if (authenticated) router.push("/s");
+      if (authenticated) router.push("/t");
     } catch (error) {
       console.log(error);
       if (axios.isAxiosError(error)) {

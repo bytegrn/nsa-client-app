@@ -8,7 +8,7 @@ import { useRouter, useSelectedLayoutSegment } from "next/navigation";
 export default function SideNavBar() {
   const NAV_ICONS = [
     { src: "/menu", icon: "boards icon", path: "dashboard" },
-    { src: "/tickets", icon: "tickets icon", path: "tickets" },
+    { src: "/tickets", icon: "tickets icon", path: "support" },
     { src: "/user-group", icon: "user-group icon", path: "users" },
     { src: "/gear", icon: "geat icon", path: "settings" },
   ] as const;
