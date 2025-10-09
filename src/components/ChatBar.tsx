@@ -18,12 +18,8 @@ export default function ChatBar() {
     const el = textAreaInput.current;
 
     if (!el) return;
-
-    if (e.target.value.trim() === "") {
-      el.style.height = `${initialInputHeight}px`;
-    } else {
-      el.style.height = `${el.scrollHeight}px`;
-    }
+    el.style.height = `${initialInputHeight}px`;
+    el.style.height = `${el.scrollHeight}px`;
   };
 
   return (
