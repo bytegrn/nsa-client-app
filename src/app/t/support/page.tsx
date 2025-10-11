@@ -3,8 +3,9 @@ import Image from "next/image";
 import ChatBar from "@/components/ChatBar";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import QuickActions from "@/components/QuickActions";
+import { API_BASE_URL } from "@/constants";
 
-export default function ticketSupport() {
+export default async function ticketSupport() {
   return (
     <div className="h-full flex flex-col w-full">
       <Header
