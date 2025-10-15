@@ -22,7 +22,7 @@ export default function SideNavBar() {
       <nav className="gap-12 flex flex-col">
         {NAV_ICONS.map(({ src, path, icon }) => (
           <NavItem
-            onClick={() => router.push(`/s/${path}`)}
+            onClick={() => router.push(`/t/${path}`)}
             src={
               currentPath === path
                 ? src.concat("-active.svg")
